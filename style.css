@@ -133,3 +133,15 @@ h2 {
 .smallknap {
   font-size: 1.4rem;
 }
+/******* Menu ******/
+.menugrid {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  font-size: 1.3rem;
+  margin-top: 0.7rem;
+  margin-left: 1rem;
+}
+li a {
+  text-decoration: none;
+}
