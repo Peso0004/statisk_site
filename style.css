@@ -9,6 +9,14 @@ img {
   display: block;
 }
 
+main {
+  margin: 1rem;
+}
+h2 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 /**** Forside*****/
 
 .category_list_container {
@@ -30,4 +38,34 @@ img {
 .product_list_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  position: relative;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: subgrid;
+  gap: 5px;
+}
+
+.Soldout {
+  position: absolute;
+  background-color: rgb(54, 53, 53);
+  color: aliceblue;
+  padding: 1rem;
+}
+.rabat {
+  position: absolute;
+  bottom: 15px;
+  justify-self: end;
+  background-color: rgb(242, 29, 29);
+  padding: 0.2rem;
+  color: rgb(52, 49, 49);
+}
+
+.trøjebilleder {
+  opacity: 40%;
+}
+.Backpack {
+  opacity: 40%;
 }
