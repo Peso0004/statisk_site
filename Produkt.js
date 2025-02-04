@@ -1,4 +1,6 @@
-let productId = 1163;
+// let productId = 1163;
+
+const productId = new URLSearchParams(window.location.search).get("product_id");
 
 let productContainer = document.querySelector(".produkt_container");
 
