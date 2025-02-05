@@ -57,13 +57,14 @@ h2 {
   background-color: rgb(54, 53, 53);
   color: rgb(255, 255, 255);
   padding: 1rem;
+  opacity: 90%;
 }
 .rabat {
-  position: absolute;
   bottom: 15px;
   justify-self: end;
   background-color: rgb(242, 29, 29);
   padding: 0.2rem;
+  margin-bottom: 4rem;
   color: rgb(52, 49, 49);
 }
 
@@ -144,4 +145,8 @@ h2 {
 }
 li a {
   text-decoration: none;
+}
+
+.hide {
+  display: none;
 }

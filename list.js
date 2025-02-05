@@ -12,8 +12,16 @@ function showProducts(data) {
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="sahara1">
         <h4>${product.productdisplayname}</h4>
         <h5>${product.articletype} / ${product.brandname}</h5>
-        <p>DKK ${product.price},-</p>
+                        <p class="${!product.discount && "hide"}">Prev. DKK ${product.price},-</p>
+               
+
+                 <p class="${!product.discount && "hide"}">Now DKK ${Math.round((product.price - (product.price * product.discount) / 100) / 10) * 10},-</p> 
+    
+        <p class="${product.discount && "hide"}">DKK ${product.price},-</p>
         <a href="produkt.html?product_id=${product.id}">Read More</a>
+        <p class="${product.soldout && "Soldout"} ${!product.soldout && "hide"}">Sold Out</p>
+        <p class="${product.discount && "rabat"} ${!product.discount && "hide"}">-${product.discount}%</p>
+
     </div>`
     )
     .join(``);

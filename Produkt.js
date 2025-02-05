@@ -31,12 +31,16 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
             <div class="Sahara">
                 <h3 class="sahara1">${data.productdisplayname}</h3>
                 <h5 class="Tshirts">${data.articletype} / ${data.brandname}</h5>
+                <p>DKK ${data.price},-</p>
                 <div class="choosegrid">
                     <p class="Choose">Choose a size</p>
                     <div class="smallknapgrid">
                         <p class="smallknap">s</p>
                         <div class="triangle-down"></div>
+
                     </div>
+                            <p class="${data.soldout && "Soldout"} ${!data.soldout && "hide"}">Sold Out</p>
+        <p class="${data.discount && "rabat"} ${!data.discount && "hide"}">-${data.discount}%</p>
                 </div>
                 <p class="knap">Add to basket</p>
             </div>
