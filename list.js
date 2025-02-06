@@ -10,6 +10,7 @@ function showProducts(data) {
       (product) => `
     <div class="card">
         <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="sahara1">
+        
         <h4>${product.productdisplayname}</h4>
         <h5>${product.articletype} / ${product.brandname}</h5>
                         <p class="${!product.discount && "hide"}">Prev. DKK ${product.price},-</p>
