@@ -18,7 +18,7 @@ function showProducts(data) {
                  <p class="${!product.discount && "hide"}">Now DKK ${Math.round((product.price - (product.price * product.discount) / 100) / 10) * 10},-</p> 
     
         <p class="${product.discount && "hide"}">DKK ${product.price},-</p>
-        <a href="produkt.html?product_id=${product.id}">Read More</a>
+        <a class="bottomlink" href="produkt.html?product_id=${product.id}">Read More</a>
         <p class="${product.soldout && "Soldout"} ${!product.soldout && "hide"}">Sold Out</p>
         <p class="${product.discount && "rabat"} ${!product.discount && "hide"}">-${product.discount}%</p>
 
@@ -36,3 +36,23 @@ function hentData() {
 }
 
 hentData();
+
+// document.querySelectorAll("button").forEach((knap) => knap.addEventListener("click", showFiltered));
+
+// function showFiltered() {
+//   const filter = this.dataset.gender;
+//   if (filter == "All") {
+//     showProducts(allData);
+//   } else {
+//     fraction = allData.filter((product) => product.gender === filter);
+//     showProducts(fraction);
+//   }
+// }
+
+// let allData;
+// fetch(endpoint)
+//   .then((response) => response.json())
+//   .then((json) => {
+//     allData = json;
+//     showProducts(allData);
+//   });
